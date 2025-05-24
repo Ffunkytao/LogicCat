@@ -1,0 +1,104 @@
+[
+    {
+        "db_id": "computer",
+        "column_names": [
+            [-1, "*"],
+            [0, "id"],
+            [0, "Bluetooth_Version"],
+            [0, "Frequency_Response_Hz"],
+            [0, "Total_Harmonic_Distortion_Percent"],
+            [1, "battery_usage_id"],
+            [1, "computer_id"],
+            [1, "usage_date"],
+            [1, "usage_duration_hours"],
+            [1, "battery_health_percent"],
+            [1, "battery_capacity_wh"],
+            [1, "power_consumption_watts"],
+            [1, "temperature_celsius"],
+            [2, "computer_id"],
+            [2, "manufacturer"],
+            [2, "model"],
+            [2, "production_year"],
+            [2, "cpu_model"],
+            [2, "cpu_cores"],
+            [2, "cpu_threads"],
+            [2, "cpu_base_frequency_ghz"],
+            [2, "cpu_max_frequency_ghz"],
+            [2, "ram_size_gb"],
+            [2, "ram_type"],
+            [2, "storage_size_gb"],
+            [2, "storage_type"],
+            [2, "gpu_model"],
+            [2, "gpu_vram_gb"],
+            [2, "screen_size_inches"],
+            [2, "screen_resolution"],
+            [2, "weight_kg"],
+            [2, "battery_capacity_wh"],
+            [3, "test_id"],
+            [3, "computer_id"],
+            [3, "test_date"],
+            [3, "test_type"],
+            [3, "cpu_score"],
+            [3, "gpu_score"],
+            [3, "ram_score"],
+            [3, "storage_score"],
+            [3, "overall_score"],
+            [3, "temperature_celsius"],
+            [3, "power_consumption_watts"],
+            [4, "usage_id"],
+            [4, "computer_id"],
+            [4, "usage_date"],
+            [4, "usage_duration_hours"],
+            [4, "usage_type"],
+            [4, "cpu_usage_percent"],
+            [4, "gpu_usage_percent"],
+            [4, "ram_usage_percent"],
+            [4, "storage_usage_percent"],
+            [4, "power_consumption_watts"],
+            [4, "temperature_celsius"]
+        ],
+        "foreign_keys": [
+            {
+                "computer_id": [1, 2]
+            },
+            {
+                "computer_id": [3, 2]
+            },
+            {
+                "computer_id": [4, 2]
+            }
+        ],
+        "primary_keys": [
+            {
+                "id": 0
+            },
+            {
+                "battery_usage_id": 1
+            },
+            {
+                "computer_id": 2
+            },
+            {
+                "test_id": 3
+            },
+            {
+                "usage_id": 4
+            }
+        ],
+        "table_names": [
+            "audio_data",
+            "battery_usage",
+            "computer_info",
+            "performance_tests",
+            "usage_records"
+        ],
+        "column_types": [
+            "int",
+            "varchar", "varchar", "float",
+            "int", "varchar", "decimal", "decimal", "decimal", "decimal",
+            "int", "varchar", "varchar", "int", "varchar", "varchar", "decimal", "decimal", "decimal", "decimal", "decimal", "decimal", "decimal", "decimal", "decimal", "decimal", "decimal", "decimal", "decimal",
+            "int", "varchar", "decimal", "decimal", "decimal", "decimal", "decimal", "decimal", "decimal", "decimal",
+            "int", "varchar", "decimal", "varchar", "decimal", "decimal", "decimal", "decimal", "decimal", "decimal"
+        ]
+    }
+]

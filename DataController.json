@@ -1,0 +1,78 @@
+[
+    {
+        "db_id": "DataCollector",
+        "column_names": [
+            [-1, "*"],
+            [0, "Id"],
+            [0, "TriggerId"],
+            [0, "NotificationTime"],
+            [0, "RecipientType"],
+            [0, "RecipientCount"],
+            [0, "NotificationMethod"],
+            [0, "NotificationContent"],
+            [0, "IsAcknowledged"],
+            [0, "AcknowledgedTime"],
+            [0, "NotificationStatus"],
+            [1, "Id"],
+            [1, "CollectorId"],
+            [1, "CollectionTime"],
+            [1, "DataType"],
+            [1, "DataValue"],
+            [1, "DataUnit"],
+            [1, "MinValue"],
+            [1, "MaxValues"],
+            [1, "AverageValue"],
+            [1, "DataAccuracy"],
+            [1, "Notes"],
+            [2, "Id"],
+            [2, "RuleName"],
+            [2, "DataType"],
+            [2, "ThresholdValue"],
+            [2, "ThresholdUnit"],
+            [2, "ConditionOperator"],
+            [2, "CollectionFrequency"],
+            [2, "ActionType"],
+            [2, "RuleDescription"],
+            [2, "IsActive"],
+            [3, "Id"],
+            [3, "CollectorModel"],
+            [3, "InstallationLocation"],
+            [3, "ManufactureDate"],
+            [3, "InstallationDate"],
+            [3, "Manufacturer"],
+            [3, "Status"],
+            [3, "Latitude"],
+            [3, "Longitude"],
+            [3, "ElevationMeters"],
+            [3, "Notes"]
+        ],
+        "foreign_keys": [],
+        "primary_keys": [
+            {
+                "Id": 0
+            },
+            {
+                "Id": 1
+            },
+            {
+                "Id": 2
+            },
+            {
+                "Id": 3
+            }
+        ],
+        "table_names": [
+            "DataCollectionNotificationRecord",
+            "DataCollectionRecord",
+            "DataCollectionRule",
+            "DataCollector"
+        ],
+        "column_types": [
+            "int",
+            "int", "int", "varchar", "varchar", "int", "varchar", "text", "tinyint", "varchar", "varchar",
+            "int", "int", "varchar", "varchar", "decimal", "varchar", "decimal", "decimal", "decimal", "decimal", "text",
+            "int", "varchar", "varchar", "varchar", "decimal", "varchar", "varchar", "varchar", "varchar", "text",
+            "int", "varchar", "varchar", "varchar", "varchar", "varchar", "decimal", "decimal", "decimal", "decimal", "text"
+        ]
+    }
+]
