@@ -1,1 +1,3 @@
-Since our paper is still in the review stage, we only disclose 500 data and part of the database for the time being. If you want to experiment further, please contact funktttao@163.com
+
+
+We will release test data about 2369 test datasets in English for Sqlite and Mysql, please expect it! Oct. 9th, 2025
