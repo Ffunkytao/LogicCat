@@ -17,13 +17,13 @@ LogicCat contains **45 databases** spanning diverse real-world domains, organize
 
 | **Category** | **Domains** | **Coverage** |
 |-------------|-------------|--------------|
-| **Consumer IoT** | Air conditioner, Television, Phone, Computer, iPad, Watch, Mouse, Earphone, Printer, Rice cooker, Water heater | 31.11% |
-| **Transportation** | Aircraft, Car, Car engine, Bike, Ship, Yacht, Submarine, Railway, Railway station, Electric scooter, Roller coaster | 26.66% |
-| **Energy & Utilities** | Generators, Wind turbine, Gas, Water pump, Smart Home, Energy Management | 13.33% |
-| **Equipment & IoT** | Equipment Management, Data Collector, Alarm System, Rain Gauge, Water Quality Monitor, Lawn mower | 13.33% |
-| **Infrastructure** | Hospital, School, Concert, Exercise club, Contract, Architect, Population | 11.11% |
-| **New Energy Vehicles** | New energy vehicles | 2.22% |
-| **Scientific** | Physics Lab | 2.22% |
+| **Consumer IoT** | Computer, iPad, Phone, Phone market, Air conditioner, Earphone, Television, Mouse, Printer, Watch, Water heater, Rice cooker | 31.12% |
+| **Transportation** | Car, Car engine, Bike, Yacht, Ship, Submarine, Railway, Railway station, AirCraft, Roller coaster, New energy vehicles, Electric scooter | 26.06% |
+| **Industry** | Generators, Wind turbine, Gas, Water pump, Smart Home (SmartHomeDB), Energy Management (EnergyManagementDB) | 10.1% |
+| **Infrastructure** | Hospital, School, Concert, Exercise club, Contract, Architect, Population | 10.1% |
+| **Services** | Equipment Management (EquipmentManagementDB), Alarm System (AlarmSystem), Data Collector (DataCollector) | 10.1% |
+| **Research** | Physics Lab (PhysicsLabDB), Water Quality Monitor (WaterQualityMonitor), Rain Gauge (RainGauge) | 9.06% |
+| **Agriculture** | Lawn mower | 3.35% |
 
 **Database Statistics:**
 - Average tables per database: **5.71**
