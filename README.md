@@ -36,25 +36,30 @@ LogicCat contains **45 databases** spanning diverse real-world domains, organize
 ```
 LogicCat/
 ├── MySQL/
-│   ├── database/          # 45 SQL schema files
+│   ├── database/              # 45 MySQL SQL schema files
 │   │   ├── air_conditioner.sql
 │   │   ├── AirCraft.sql
 │   │   ├── phone.sql
 │   │   └── ...
-│   ├── data.json          # Question-SQL pairs with annotations
-│   ├── data.sql           # Complete database dumps
-│   ├── table.json         # Database schema information
-│   
+│   ├── data.json              # Question–SQL pairs with annotations
+│   ├── data.sql               # Complete database dumps
+│   ├── table.json             # Database schema information
 │
-└── Sqlite/
-    ├── database/          # 45 SQLite database files
-    │   ├── air_conditioner.db
-    │   ├── aircraft.db
-    │   ├── phone.db
-    │   └── ...
-    ├── data.json          # Question-SQL pairs with annotations
-    ├── data.sql           # Complete database dumps
-    ├── table.json         # Database schema information
+├── Sqlite/
+│   ├── database/              # 45 SQLite .db files
+│   │   ├── air_conditioner.db
+│   │   ├── aircraft.db
+│   │   ├── phone.db
+│   │   └── ...
+│   ├── data.json              # Question–SQL pairs with annotations
+│   ├── data.sql               # Complete database dumps
+│   ├── table.json             # Database schema information
+│
+└── Small500/                  # 500-sample lightweight subset
+    ├── mysql_gold_500.sql     # MySQL gold SQL scripts (500 samples)
+    ├── mysql_tiny_500.json    # MySQL question–SQL subset (500 samples)
+    ├── sqlite_gold_500.sql    # SQLite gold SQL scripts (500 samples)
+    ├── sqlite_tiny_500.json   # SQLite question–SQL subset (500 samples)
 ```
 
 ### Data Format
