@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : sh-cynosdbmysql-grp-noxslim6.sql.tencentcdb.com_26791
+ Source Server         : LogicCat
  Source Server Type    : MySQL
  Source Server Version : 80030
- Source Host           : sh-cynosdbmysql-grp-noxslim6.sql.tencentcdb.com:26791
+ Source Host           : sh-cynosdbmysql-grp-fx0rl4n2.sql.tencentcdb.com:21075
  Source Schema         : generators
 
  Target Server Type    : MySQL
  Target Server Version : 80030
  File Encoding         : 65001
 
- Date: 11/08/2025 12:27:59
+ Date: 10/12/2025 19:26:01
 */
 
 SET NAMES utf8mb4;
@@ -21,139 +21,159 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- Table structure for carbon_emissions
 -- ----------------------------
 DROP TABLE IF EXISTS `carbon_emissions`;
-CREATE TABLE `carbon_emissions` (
-  `id` int NOT NULL,
-  `emission_factor` decimal(10,2) DEFAULT NULL,
-  `annual_emissions_tonnes` decimal(10,2) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `carbon_emissions`  (
+  `id` int(0) NOT NULL,
+  `emission_factor` decimal(10, 2) NULL DEFAULT NULL,
+  `annual_emissions_tonnes` decimal(10, 2) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of carbon_emissions
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for energy_data
 -- ----------------------------
 DROP TABLE IF EXISTS `energy_data`;
-CREATE TABLE `energy_data` (
-  `device_id` int DEFAULT NULL,
-  `energy_saved` decimal(10,2) DEFAULT NULL,
-  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `energy_data`  (
+  `device_id` int(0) NULL DEFAULT NULL,
+  `energy_saved` decimal(10, 2) NULL DEFAULT NULL,
+  `timestamp` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0) ON UPDATE CURRENT_TIMESTAMP(0)
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for fuzzy_membership
+-- Records of energy_data
 -- ----------------------------
-DROP TABLE IF EXISTS `fuzzy_membership`;
-CREATE TABLE `fuzzy_membership` (
-  `id` int NOT NULL,
-  `variable_name` varchar(50) DEFAULT NULL,
-  `membership_level` varchar(50) DEFAULT NULL,
-  `threshold_value` decimal(10,2) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
 -- Table structure for generators
 -- ----------------------------
 DROP TABLE IF EXISTS `generators`;
-CREATE TABLE `generators` (
-  `GeneratorID` int NOT NULL COMMENT '主键，唯一标识发电机',
-  `GeneratorName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '发电机名称',
-  `GeneratorType` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '发电机类型（水轮机、涡轮机）',
-  `RatedPower` int DEFAULT NULL COMMENT '额定功率（单位：KW）',
-  `Status` int DEFAULT NULL COMMENT '当前状态（运行、停机、维修等）1表示运行，0表示停机，2表示维修',
-  `ManufactureDate` datetime DEFAULT NULL COMMENT '生产日期',
-  `InstallationDate` datetime DEFAULT NULL COMMENT '安装日期',
-  `ManufacturerID` int DEFAULT NULL COMMENT '外键，关联厂家表',
-  `Maxpower` int DEFAULT NULL COMMENT '最大功率（单位：KW）',
-  `ContinualTime` int DEFAULT NULL COMMENT '连续工作时间（单位：h）',
-  `RatedVoltage` int DEFAULT NULL COMMENT '额定电压',
-  `RatedRotationSpeed` int DEFAULT NULL COMMENT '额定转速（单位：转/分钟）',
-  `Flux` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '单位：流量（立方米/S）',
+CREATE TABLE `generators`  (
+  `GeneratorID` int(0) NOT NULL COMMENT '主键，唯一标识发电机',
+  `GeneratorName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '发电机名称',
+  `GeneratorType` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '发电机类型（水轮机、涡轮机）',
+  `RatedPower` int(0) NULL DEFAULT NULL COMMENT '额定功率（单位：KW）',
+  `Status` int(0) NULL DEFAULT NULL COMMENT '当前状态（运行、停机、维修等）1表示运行，0表示停机，2表示维修',
+  `ManufactureDate` datetime(0) NULL DEFAULT NULL COMMENT '生产日期',
+  `InstallationDate` datetime(0) NULL DEFAULT NULL COMMENT '安装日期',
+  `ManufacturerID` int(0) NULL DEFAULT NULL COMMENT '外键，关联厂家表',
+  `Maxpower` int(0) NULL DEFAULT NULL COMMENT '最大功率（单位：KW）',
+  `ContinualTime` int(0) NULL DEFAULT NULL COMMENT '连续工作时间（单位：h）',
+  `RatedVoltage` int(0) NULL DEFAULT NULL COMMENT '额定电压',
+  `RatedRotationSpeed` int(0) NULL DEFAULT NULL COMMENT '额定转速（单位：转/分钟）',
+  `Flux` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '单位：流量（立方米/S）',
   PRIMARY KEY (`GeneratorID`) USING BTREE,
-  KEY `Manufacturer ID` (`ManufacturerID`),
+  INDEX `Manufacturer ID`(`ManufacturerID`) USING BTREE,
   CONSTRAINT `Manufacturer ID` FOREIGN KEY (`ManufacturerID`) REFERENCES `manufacturers` (`ManufacturerID`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of generators
 -- ----------------------------
-BEGIN;
+INSERT INTO `generators` VALUES (1, NULL, NULL, 1000, NULL, NULL, NULL, NULL, 1000, 100, NULL, 3000, '500');
+INSERT INTO `generators` VALUES (2, NULL, NULL, 500, NULL, NULL, NULL, NULL, NULL, 100, NULL, NULL, NULL);
+INSERT INTO `generators` VALUES (3, NULL, NULL, 1000, NULL, NULL, NULL, NULL, 1000, NULL, NULL, 3000, '500');
+INSERT INTO `generators` VALUES (4, NULL, NULL, 500, NULL, NULL, NULL, NULL, NULL, NULL, 10, 1500, '50');
+INSERT INTO `generators` VALUES (5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1000, 200, NULL, NULL, NULL);
+INSERT INTO `generators` VALUES (6, 'Generator_Maintenance', NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `generators` VALUES (7, 'EnvironmentalImpactGen', NULL, 1000, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO `generators` VALUES (1001, '发电机1', '水轮机', 150000, 0, '2006-01-01 00:00:00', '2016-02-09 00:00:00', 2001, 180000, 12, 14400, 900, '24');
 INSERT INTO `generators` VALUES (1002, '发电机2', '涡轮机', 150000, 0, '2004-02-01 17:28:26', '2009-07-01 17:28:37', 2001, 180000, 12, 12400, 900, '24');
 INSERT INTO `generators` VALUES (1003, '发电机3', '水轮机', 150000, 0, '2015-03-01 17:31:05', '2019-03-09 17:31:16', 2002, 180000, 12, 14400, 900, '24');
 INSERT INTO `generators` VALUES (1004, '发电机4', '水轮机', 150000, 1, '2015-02-09 17:32:27', '2016-11-01 17:32:38', 2002, 180000, 12, 12400, 900, '24');
 INSERT INTO `generators` VALUES (1005, '发电机5', '涡轮机', 150000, 0, '2018-02-09 19:21:53', '2020-02-01 19:21:59', 2001, 180000, 12, 12400, 800, '24');
 INSERT INTO `generators` VALUES (1006, '发电机5', '涡轮机', 150000, 1, '2017-03-02 19:22:05', '2020-02-06 19:22:12', 2002, 180000, 12, 14400, 800, '24');
-COMMIT;
+INSERT INTO `generators` VALUES (1007, 'Generator A', 'Hydro', 200, 1, NULL, NULL, NULL, 220, 100, 400, 1500, '15');
+INSERT INTO `generators` VALUES (1008, 'Generator B', 'Hydro', 300, 1, NULL, NULL, NULL, 330, 100, 400, 1500, '20');
+INSERT INTO `generators` VALUES (1009, 'Generator C', 'Hydro', 150, 1, NULL, NULL, NULL, 165, 100, 400, 1500, '12');
+INSERT INTO `generators` VALUES (1010, 'Generator D', 'Hydro', 250, 1, NULL, NULL, NULL, 275, 100, 400, 1500, '18');
+INSERT INTO `generators` VALUES (1011, 'Generator E', 'Hydro', 100, 1, NULL, NULL, NULL, 110, 100, 400, 1500, '10');
+INSERT INTO `generators` VALUES (1012, 'Continuous Generator', 'Hydro', 500, 1, NULL, NULL, NULL, NULL, 100, NULL, NULL, NULL);
+INSERT INTO `generators` VALUES (1013, 'High Power Generator', 'Thermal', 10000, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `generators` VALUES (1014, 'Current Test Generator', 'Hydro', 500, NULL, NULL, NULL, NULL, NULL, NULL, 10, NULL, NULL);
+INSERT INTO `generators` VALUES (1015, 'Maintenance Generator', 'Hydro', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `generators` VALUES (1016, 'Power Calc Generator', 'Hydro', NULL, NULL, NULL, NULL, NULL, 1000, NULL, NULL, 3000, '1000');
+INSERT INTO `generators` VALUES (1017, 'Test Generator Name', 'Hydro', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `generators` VALUES (1018, 'Generator18', 'Turbine', 1000, 1, '2023-01-01 00:00:00', '2023-02-01 00:00:00', 2001, 1000, 100, 10, 3000, '1000');
+INSERT INTO `generators` VALUES (1019, 'Test Generator', 'Turbine', 500, 1, '2023-01-01 00:00:00', '2023-02-01 00:00:00', 2001, 600, 100, 10, 3000, '50');
 
 -- ----------------------------
 -- Table structure for generatorstationassociation
 -- ----------------------------
 DROP TABLE IF EXISTS `generatorstationassociation`;
-CREATE TABLE `generatorstationassociation` (
-  `AssociationID` int NOT NULL COMMENT '主键，唯一标识关联',
-  `GeneratorID` int DEFAULT NULL COMMENT '外键，关联发电机表',
-  `StationID` int DEFAULT NULL COMMENT '外键，关联电站表',
-  KEY `GeneratorID` (`GeneratorID`),
-  KEY `StationID` (`StationID`),
+CREATE TABLE `generatorstationassociation`  (
+  `AssociationID` int(0) NOT NULL COMMENT '主键，唯一标识关联',
+  `GeneratorID` int(0) NULL DEFAULT NULL COMMENT '外键，关联发电机表',
+  `StationID` int(0) NULL DEFAULT NULL COMMENT '外键，关联电站表',
+  INDEX `GeneratorID`(`GeneratorID`) USING BTREE,
+  INDEX `StationID`(`StationID`) USING BTREE,
   CONSTRAINT `GeneratorID` FOREIGN KEY (`GeneratorID`) REFERENCES `generators` (`GeneratorID`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `StationID` FOREIGN KEY (`StationID`) REFERENCES `powerstations` (`StationID`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of generatorstationassociation
 -- ----------------------------
-BEGIN;
 INSERT INTO `generatorstationassociation` VALUES (101, 1001, 3001);
 INSERT INTO `generatorstationassociation` VALUES (102, 1002, 3001);
 INSERT INTO `generatorstationassociation` VALUES (103, 1003, 3001);
 INSERT INTO `generatorstationassociation` VALUES (104, 1004, 3001);
 INSERT INTO `generatorstationassociation` VALUES (105, 1005, 3001);
 INSERT INTO `generatorstationassociation` VALUES (106, 1006, 3001);
-COMMIT;
+INSERT INTO `generatorstationassociation` VALUES (107, 1007, 3001);
+INSERT INTO `generatorstationassociation` VALUES (108, 1008, 3001);
+INSERT INTO `generatorstationassociation` VALUES (109, 1009, 3001);
+INSERT INTO `generatorstationassociation` VALUES (110, 1010, 3001);
+INSERT INTO `generatorstationassociation` VALUES (111, 1011, 3001);
+INSERT INTO `generatorstationassociation` VALUES (107, 1008, 3003);
+INSERT INTO `generatorstationassociation` VALUES (108, 1009, 3003);
+INSERT INTO `generatorstationassociation` VALUES (109, 1010, 3003);
+INSERT INTO `generatorstationassociation` VALUES (110, 1011, 3003);
+INSERT INTO `generatorstationassociation` VALUES (111, 1012, 3003);
 
 -- ----------------------------
 -- Table structure for manufacturers
 -- ----------------------------
 DROP TABLE IF EXISTS `manufacturers`;
-CREATE TABLE `manufacturers` (
-  `ManufacturerID` int NOT NULL COMMENT '主键，唯一标识厂家',
-  `ManufacturerName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '厂家名称',
-  `Revenue` int DEFAULT NULL COMMENT '厂家年度营业额（单位：万元）',
-  `Profit` int DEFAULT NULL COMMENT '厂家年度利润（单位：万元）',
-  `Address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '厂家地址',
-  `PriceWater` int DEFAULT NULL COMMENT '水轮发电机单价（单位：万元）',
-  `PriceTurbo` int DEFAULT NULL COMMENT '涡轮发电机单价（单位：万元）',
+CREATE TABLE `manufacturers`  (
+  `ManufacturerID` int(0) NOT NULL COMMENT '主键，唯一标识厂家',
+  `ManufacturerName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '厂家名称',
+  `Revenue` int(0) NULL DEFAULT NULL COMMENT '厂家年度营业额（单位：万元）',
+  `Profit` int(0) NULL DEFAULT NULL COMMENT '厂家年度利润（单位：万元）',
+  `Address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '厂家地址',
+  `PriceWater` int(0) NULL DEFAULT NULL COMMENT '水轮发电机单价（单位：万元）',
+  `PriceTurbo` int(0) NULL DEFAULT NULL COMMENT '涡轮发电机单价（单位：万元）',
   PRIMARY KEY (`ManufacturerID`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of manufacturers
 -- ----------------------------
-BEGIN;
+INSERT INTO `manufacturers` VALUES (1, NULL, NULL, 5000, NULL, NULL, 200);
 INSERT INTO `manufacturers` VALUES (2001, '中国重工水电集团', 135610, 56410, '中国北京', 1100, 1200);
 INSERT INTO `manufacturers` VALUES (2002, '中国葛洲坝集团', 339011, 15320, '中国上海', 1050, 1150);
-COMMIT;
 
 -- ----------------------------
 -- Table structure for operationrecords
 -- ----------------------------
 DROP TABLE IF EXISTS `operationrecords`;
-CREATE TABLE `operationrecords` (
-  `RecordID` int NOT NULL COMMENT '主键，唯一标识记录',
-  `GeneratorID` int DEFAULT NULL COMMENT '外键，关联发电机表',
-  `StartTime` datetime DEFAULT NULL COMMENT '运行开始时间',
-  `EndTime` datetime DEFAULT NULL COMMENT '运行结束时间',
-  `PowerGenerated` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '本次运行的发电量（单位：千瓦时）',
-  `OperationStatus` int DEFAULT NULL COMMENT ' 运行状态（正常、异常等）,0表示异常，1表示正常',
+CREATE TABLE `operationrecords`  (
+  `RecordID` int(0) NOT NULL COMMENT '主键，唯一标识记录',
+  `GeneratorID` int(0) NULL DEFAULT NULL COMMENT '外键，关联发电机表',
+  `StartTime` datetime(0) NULL DEFAULT NULL COMMENT '运行开始时间',
+  `EndTime` datetime(0) NULL DEFAULT NULL COMMENT '运行结束时间',
+  `PowerGenerated` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '本次运行的发电量（单位：千瓦时）',
+  `OperationStatus` int(0) NULL DEFAULT NULL COMMENT ' 运行状态（正常、异常等）,0表示异常，1表示正常',
   PRIMARY KEY (`RecordID`) USING BTREE,
-  KEY `GeneratorID1` (`GeneratorID`),
+  INDEX `GeneratorID1`(`GeneratorID`) USING BTREE,
   CONSTRAINT `GeneratorID1` FOREIGN KEY (`GeneratorID`) REFERENCES `generators` (`GeneratorID`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of operationrecords
 -- ----------------------------
-BEGIN;
 INSERT INTO `operationrecords` VALUES (60001, 1001, '2024-01-09 00:00:00', '2024-01-10 00:00:00', '2880000', 1);
 INSERT INTO `operationrecords` VALUES (60002, 1002, '2024-01-09 00:00:00', '2024-01-10 00:00:00', '2880000', 1);
 INSERT INTO `operationrecords` VALUES (60003, 1003, '2024-01-09 00:00:00', '2024-01-10 00:00:00', '2880000', 1);
@@ -166,48 +186,54 @@ INSERT INTO `operationrecords` VALUES (60009, 1003, '2024-01-10 00:00:00', '2024
 INSERT INTO `operationrecords` VALUES (60010, 1004, '2024-01-10 00:00:00', '2024-01-11 00:00:00', '2580000', 1);
 INSERT INTO `operationrecords` VALUES (60011, 1005, '2024-01-10 00:00:00', '2024-01-11 00:00:00', '2580000', 1);
 INSERT INTO `operationrecords` VALUES (60012, 1006, '2024-01-10 00:00:00', '2024-01-11 00:00:00', '2580000', 1);
-COMMIT;
 
 -- ----------------------------
 -- Table structure for powerstations
 -- ----------------------------
 DROP TABLE IF EXISTS `powerstations`;
-CREATE TABLE `powerstations` (
-  `StationID` int NOT NULL COMMENT '主键，唯一标识电站',
-  `StationName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '电站名称',
-  `Location` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '电站位置',
-  `TotalCapacity` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '电站总装机容量（单位：MW）',
-  `Status` int DEFAULT NULL COMMENT '电站当前状态（1运行、0停机、2建设中等）',
-  `Flux` int DEFAULT NULL COMMENT '单位：流量（立方米/S）',
+CREATE TABLE `powerstations`  (
+  `StationID` int(0) NOT NULL COMMENT '主键，唯一标识电站',
+  `StationName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '电站名称',
+  `Location` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '电站位置',
+  `TotalCapacity` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '电站总装机容量（单位：MW）',
+  `Status` int(0) NULL DEFAULT NULL COMMENT '电站当前状态（1运行、0停机、2建设中等）',
+  `Flux` int(0) NULL DEFAULT NULL COMMENT '单位：流量（立方米/S）',
   PRIMARY KEY (`StationID`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of powerstations
 -- ----------------------------
-BEGIN;
 INSERT INTO `powerstations` VALUES (3001, '西江', '西江', '12', 1, 648);
 INSERT INTO `powerstations` VALUES (3002, '东江', '东江', '12', 2, 520);
-COMMIT;
+INSERT INTO `powerstations` VALUES (3003, 'Test Station', 'Test Location', '1000', 1, 100);
 
 -- ----------------------------
 -- Table structure for sensordata
 -- ----------------------------
 DROP TABLE IF EXISTS `sensordata`;
-CREATE TABLE `sensordata` (
-  `DataID` int NOT NULL COMMENT '主键，唯一标识数据',
-  `SensorID` int DEFAULT NULL COMMENT '外键，关联传感器表',
-  `CollectionTime` datetime DEFAULT NULL COMMENT '数据采集时间',
-  `DataValue` double DEFAULT NULL COMMENT '传感器采集的数据值',
+CREATE TABLE `sensordata`  (
+  `DataID` int(0) NOT NULL COMMENT '主键，唯一标识数据',
+  `SensorID` int(0) NULL DEFAULT NULL COMMENT '外键，关联传感器表',
+  `CollectionTime` datetime(0) NULL DEFAULT NULL COMMENT '数据采集时间',
+  `DataValue` double NULL DEFAULT NULL COMMENT '传感器采集的数据值',
   PRIMARY KEY (`DataID`) USING BTREE,
-  KEY `SensorID1` (`SensorID`),
+  INDEX `SensorID1`(`SensorID`) USING BTREE,
   CONSTRAINT `SensorID1` FOREIGN KEY (`SensorID`) REFERENCES `sensors` (`SensorID`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sensordata
 -- ----------------------------
-BEGIN;
+INSERT INTO `sensordata` VALUES (1, 101, '2025-11-26 13:40:50', 50);
+INSERT INTO `sensordata` VALUES (2, 2, NULL, 150);
+INSERT INTO `sensordata` VALUES (3, 3, NULL, 150);
+INSERT INTO `sensordata` VALUES (4, 4, NULL, 50);
+INSERT INTO `sensordata` VALUES (5, 5, NULL, 50);
+INSERT INTO `sensordata` VALUES (7, 104, '2025-11-26 13:42:47', 50);
+INSERT INTO `sensordata` VALUES (9, 9, NULL, 200);
+INSERT INTO `sensordata` VALUES (11, 11, NULL, 1000000);
+INSERT INTO `sensordata` VALUES (12, 12, NULL, 2000);
 INSERT INTO `sensordata` VALUES (50001, 40001, '2019-03-27 00:00:00', 700);
 INSERT INTO `sensordata` VALUES (50002, 40002, '2019-03-27 00:00:00', 700);
 INSERT INTO `sensordata` VALUES (50003, 40003, '2019-03-27 00:00:00', 13);
@@ -244,26 +270,46 @@ INSERT INTO `sensordata` VALUES (50033, 40033, '2019-03-27 00:00:00', 13);
 INSERT INTO `sensordata` VALUES (50034, 40034, '2019-03-27 00:00:00', 1378);
 INSERT INTO `sensordata` VALUES (50035, 40035, '2019-03-27 00:00:00', 1378);
 INSERT INTO `sensordata` VALUES (50036, 40036, '2019-03-27 00:00:00', 0);
-COMMIT;
+INSERT INTO `sensordata` VALUES (50037, 40001, '2024-01-01 08:00:00', 20);
+INSERT INTO `sensordata` VALUES (50038, 40001, '2024-01-01 10:00:00', 80);
+INSERT INTO `sensordata` VALUES (50039, 40002, '2024-01-01 00:00:00', -273.15);
+INSERT INTO `sensordata` VALUES (50040, 40002, '2024-01-01 12:00:00', 1000);
+INSERT INTO `sensordata` VALUES (50041, 40037, '2024-01-01 09:00:00', 50);
+INSERT INTO `sensordata` VALUES (50042, 40038, '2024-01-01 14:00:00', 200);
+INSERT INTO `sensordata` VALUES (50043, 40039, '2024-01-01 15:00:00', 50);
 
 -- ----------------------------
 -- Table structure for sensors
 -- ----------------------------
 DROP TABLE IF EXISTS `sensors`;
-CREATE TABLE `sensors` (
-  `SensorID` int NOT NULL COMMENT '唯一标识传感器',
-  `GeneratorID` int DEFAULT NULL COMMENT '外键，关联发电机表',
-  `SensorType` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '传感器类型\r\n温度传感器器（单位，摄氏度）\r\n压力传感器（单位，Mpa）\r\n震动传感器（单位，Hz）\r\n流量传感器（单位，立方米/S）',
-  `SensorName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '传感器名',
+CREATE TABLE `sensors`  (
+  `SensorID` int(0) NOT NULL COMMENT '唯一标识传感器',
+  `GeneratorID` int(0) NULL DEFAULT NULL COMMENT '外键，关联发电机表',
+  `SensorType` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '传感器类型\r\n温度传感器器（单位，摄氏度）\r\n压力传感器（单位，Mpa）\r\n震动传感器（单位，Hz）\r\n流量传感器（单位，立方米/S）',
+  `SensorName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '传感器名',
   PRIMARY KEY (`SensorID`) USING BTREE,
-  KEY `GeneratorID2` (`GeneratorID`),
+  INDEX `GeneratorID2`(`GeneratorID`) USING BTREE,
   CONSTRAINT `GeneratorID2` FOREIGN KEY (`GeneratorID`) REFERENCES `generators` (`GeneratorID`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sensors
 -- ----------------------------
-BEGIN;
+INSERT INTO `sensors` VALUES (1, NULL, 'TemperatureSensor', NULL);
+INSERT INTO `sensors` VALUES (2, NULL, 'TemperatureSensor', NULL);
+INSERT INTO `sensors` VALUES (3, NULL, 'TemperatureSensor', NULL);
+INSERT INTO `sensors` VALUES (4, NULL, 'PressureSensor', NULL);
+INSERT INTO `sensors` VALUES (5, NULL, 'PressureSensor', NULL);
+INSERT INTO `sensors` VALUES (9, NULL, 'VibrationSensor', NULL);
+INSERT INTO `sensors` VALUES (11, NULL, 'FlowSensor', NULL);
+INSERT INTO `sensors` VALUES (12, NULL, 'TemperatureSensor', NULL);
+INSERT INTO `sensors` VALUES (101, NULL, 'PressureSensor', NULL);
+INSERT INTO `sensors` VALUES (102, NULL, 'PressureSensor', NULL);
+INSERT INTO `sensors` VALUES (103, NULL, 'VibrationSensor', NULL);
+INSERT INTO `sensors` VALUES (104, NULL, 'PressureSensor', NULL);
+INSERT INTO `sensors` VALUES (106, NULL, 'VibrationSensor', NULL);
+INSERT INTO `sensors` VALUES (107, NULL, 'PressureSensor', NULL);
+INSERT INTO `sensors` VALUES (109, NULL, 'VibrationSensor', NULL);
 INSERT INTO `sensors` VALUES (40001, 1001, '温度传感器', '温度传感器1');
 INSERT INTO `sensors` VALUES (40002, 1001, '温度传感器', '温度传感器2');
 INSERT INTO `sensors` VALUES (40003, 1001, '流量传感器', '流量传感器1');
@@ -300,6 +346,10 @@ INSERT INTO `sensors` VALUES (40033, 1006, '流量传感器', '流量传感器1'
 INSERT INTO `sensors` VALUES (40034, 1006, '振动传感器', '振动传感器1');
 INSERT INTO `sensors` VALUES (40035, 1006, '振动传感器', '振动传感器2');
 INSERT INTO `sensors` VALUES (40036, 1006, '压力传感器', '压力传感器1');
-COMMIT;
+INSERT INTO `sensors` VALUES (40037, 1001, 'Flow Sensor', 'Flow Sensor Test');
+INSERT INTO `sensors` VALUES (40038, 1017, 'Temperature Sensor', 'Temp Sensor Test');
+INSERT INTO `sensors` VALUES (40039, 1001, 'Pressure Sensor', 'Pressure Sensor Test');
+INSERT INTO `sensors` VALUES (40040, 1019, 'Temperature Sensor', 'Temperature Sensor1');
+INSERT INTO `sensors` VALUES (40041, 1001, 'Pressure Sensor', 'Pressure Sensor2');
 
 SET FOREIGN_KEY_CHECKS = 1;
