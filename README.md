@@ -41,25 +41,17 @@ LogicCat/
 │   │   ├── AirCraft.sql
 │   │   ├── phone.sql
 │   │   └── ...
-│   ├── data.json              # Question–SQL pairs with annotations
-│   ├── data.sql               # Complete database dumps
-│   ├── table.json             # Database schema information
+│   ├── dev.json               # Complete dev sql  ''
+│   ├── table_test.json        #   Database schema information
+│   ├── table_train.json       #   Database schema information
+│   ├── test.json              # Complete test sql  ''
+│   ├── train.json             # Complete train sql  ''
 │
-├── Sqlite/
-│   ├── database/              # 45 SQLite .db files
-│   │   ├── air_conditioner.db
-│   │   ├── aircraft.db
-│   │   ├── phone.db
-│   │   └── ...
-│   ├── data.json              # Question–SQL pairs with annotations
-│   ├── data.sql               # Complete database dumps
-│   ├── table.json             # Database schema information
 │
 └── Small500/                  # 500-sample lightweight subset
     ├── mysql_gold_500.sql     # MySQL gold SQL scripts (500 samples)
     ├── mysql_tiny_500.json    # MySQL question–SQL subset (500 samples)
-    ├── sqlite_gold_500.sql    # SQLite gold SQL scripts (500 samples)
-    ├── sqlite_tiny_500.json   # SQLite question–SQL subset (500 samples)
+
 ```
 
 ### Data Format
@@ -166,20 +158,6 @@ for statement in schema_sql.split(';'):
 conn.commit()
 ```
 
-**For SQLite:**
-
-```python
-import sqlite3
-
-# Connect to SQLite database (already populated)
-conn = sqlite3.connect('Sqlite/database/phone.db')
-cursor = conn.cursor()
-
-# Query example
-cursor.execute("SELECT * FROM sqlite_master WHERE type='table'")
-tables = cursor.fetchall()
-print(f"Tables: {tables}")
-```
 
 ## Evalaution Pipeline 
 On Progess (Nov 9 2025)
@@ -267,5 +245,5 @@ This work was supported by Zhengzhou University, Vanderbilt University, and Wuha
 
 ---
 
-**Last Updated:** December 10, 2025. Revising 600 empty querys
+**Last Updated:** Mar 7, 2026. Spliting SQL and Deleting Sqlite SQL
 

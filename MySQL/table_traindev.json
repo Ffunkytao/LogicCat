@@ -199,354 +199,7 @@
             "varchar"
         ]
     },
-    {
-        "db_id": "air_conditioner",
-        "column_names": [
-            [
-                -1,
-                "*"
-            ],
-            [
-                0,
-                "ac_id"
-            ],
-            [
-                0,
-                "manufacturer"
-            ],
-            [
-                0,
-                "model"
-            ],
-            [
-                0,
-                "production_year"
-            ],
-            [
-                0,
-                "cooling_capacity_btu"
-            ],
-            [
-                0,
-                "heating_capacity_btu"
-            ],
-            [
-                0,
-                "energy_efficiency_ratio"
-            ],
-            [
-                0,
-                "power_consumption_watts"
-            ],
-            [
-                0,
-                "refrigerant_type"
-            ],
-            [
-                0,
-                "noise_level_db"
-            ],
-            [
-                0,
-                "weight_kg"
-            ],
-            [
-                0,
-                "dimensions"
-            ],
-            [
-                0,
-                "warranty_period_months"
-            ],
-            [
-                1,
-                "energy_id"
-            ],
-            [
-                1,
-                "ac_id"
-            ],
-            [
-                1,
-                "record_date"
-            ],
-            [
-                1,
-                "energy_consumption_kwh"
-            ],
-            [
-                1,
-                "power_consumption_watts"
-            ],
-            [
-                1,
-                "temperature_setting_celsius"
-            ],
-            [
-                1,
-                "mode"
-            ],
-            [
-                1,
-                "fan_speed"
-            ],
-            [
-                1,
-                "indoor_temperature_celsius"
-            ],
-            [
-                1,
-                "outdoor_temperature_celsius"
-            ],
-            [
-                1,
-                "humidity_percent"
-            ],
-            [
-                2,
-                "humidity_id"
-            ],
-            [
-                2,
-                "ac_id"
-            ],
-            [
-                2,
-                "record_date"
-            ],
-            [
-                2,
-                "indoor_humidity_percent"
-            ],
-            [
-                2,
-                "outdoor_humidity_percent"
-            ],
-            [
-                2,
-                "temperature_setting_celsius"
-            ],
-            [
-                2,
-                "mode"
-            ],
-            [
-                2,
-                "fan_speed"
-            ],
-            [
-                2,
-                "power_consumption_watts"
-            ],
-            [
-                3,
-                "refrigerant_type"
-            ],
-            [
-                3,
-                "phase_change_heat_kj_per_kg"
-            ],
-            [
-                3,
-                "refrigerant_flow_rate_kg_per_s"
-            ],
-            [
-                4,
-                "temperature_id"
-            ],
-            [
-                4,
-                "ac_id"
-            ],
-            [
-                4,
-                "record_date"
-            ],
-            [
-                4,
-                "indoor_temperature_celsius"
-            ],
-            [
-                4,
-                "outdoor_temperature_celsius"
-            ],
-            [
-                4,
-                "temperature_setting_celsius"
-            ],
-            [
-                4,
-                "mode"
-            ],
-            [
-                4,
-                "fan_speed"
-            ],
-            [
-                4,
-                "humidity_percent"
-            ],
-            [
-                4,
-                "power_consumption_watts"
-            ],
-            [
-                5,
-                "usage_id"
-            ],
-            [
-                5,
-                "ac_id"
-            ],
-            [
-                5,
-                "usage_date"
-            ],
-            [
-                5,
-                "usage_duration_hours"
-            ],
-            [
-                5,
-                "temperature_setting_celsius"
-            ],
-            [
-                5,
-                "fan_speed"
-            ],
-            [
-                5,
-                "mode"
-            ],
-            [
-                5,
-                "power_consumption_watts"
-            ],
-            [
-                5,
-                "indoor_temperature_celsius"
-            ],
-            [
-                5,
-                "outdoor_temperature_celsius"
-            ],
-            [
-                5,
-                "humidity_percent"
-            ]
-        ],
-        "foreign_keys": [
-            {
-                "ac_id": [
-                    1,
-                    0
-                ]
-            },
-            {
-                "ac_id": [
-                    2,
-                    0
-                ]
-            },
-            {
-                "ac_id": [
-                    4,
-                    0
-                ]
-            }
-        ],
-        "table_names": [
-            "air_conditioner_info",
-            "energy_consumption",
-            "humidity_records",
-            "refrigerant_properties",
-            "temperature_records",
-            "usage_records"
-        ],
-        "primary_keys": [
-            {
-                "ac_id": 0
-            },
-            {
-                "energy_id": 1
-            },
-            {
-                "humidity_id": 2
-            },
-            {
-                "refrigerant_type": 3
-            },
-            {
-                "temperature_id": 4
-            },
-            {
-                "usage_id": 5
-            }
-        ],
-        "column_types": [
-            "int",
-            "int",
-            "varchar",
-            "varchar",
-            "year",
-            "int",
-            "int",
-            "decimal",
-            "decimal",
-            "varchar",
-            "decimal",
-            "decimal",
-            "int",
-            "int",
-            "int",
-            "varchar",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "varchar",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "int",
-            "int",
-            "varchar",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "varchar",
-            "decimal",
-            "decimal",
-            "decimal",
-            "varchar",
-            "float",
-            "float",
-            "int",
-            "int",
-            "varchar",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "varchar",
-            "decimal",
-            "decimal",
-            "decimal",
-            "int",
-            "int",
-            "varchar",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "varchar",
-            "decimal",
-            "decimal",
-            "decimal"
-        ]
-    },
+
     {
         "db_id": "AlarmSystem",
         "column_names": [
@@ -2570,327 +2223,7 @@
             "decimal"
         ]
     },
-    {
-        "db_id": "computer",
-        "column_names": [
-            [
-                -1,
-                "*"
-            ],
-            [
-                0,
-                "id"
-            ],
-            [
-                0,
-                "Bluetooth_Version"
-            ],
-            [
-                0,
-                "Frequency_Response_Hz"
-            ],
-            [
-                0,
-                "Total_Harmonic_Distortion_Percent"
-            ],
-            [
-                1,
-                "battery_usage_id"
-            ],
-            [
-                1,
-                "computer_id"
-            ],
-            [
-                1,
-                "usage_date"
-            ],
-            [
-                1,
-                "usage_duration_hours"
-            ],
-            [
-                1,
-                "battery_health_percent"
-            ],
-            [
-                1,
-                "battery_capacity_wh"
-            ],
-            [
-                1,
-                "power_consumption_watts"
-            ],
-            [
-                1,
-                "temperature_celsius"
-            ],
-            [
-                2,
-                "computer_id"
-            ],
-            [
-                2,
-                "manufacturer"
-            ],
-            [
-                2,
-                "model"
-            ],
-            [
-                2,
-                "production_year"
-            ],
-            [
-                2,
-                "cpu_model"
-            ],
-            [
-                2,
-                "cpu_cores"
-            ],
-            [
-                2,
-                "cpu_threads"
-            ],
-            [
-                2,
-                "cpu_base_frequency_ghz"
-            ],
-            [
-                2,
-                "cpu_max_frequency_ghz"
-            ],
-            [
-                2,
-                "ram_size_gb"
-            ],
-            [
-                2,
-                "ram_type"
-            ],
-            [
-                2,
-                "storage_size_gb"
-            ],
-            [
-                2,
-                "storage_type"
-            ],
-            [
-                2,
-                "gpu_model"
-            ],
-            [
-                2,
-                "gpu_vram_gb"
-            ],
-            [
-                2,
-                "screen_size_inches"
-            ],
-            [
-                2,
-                "screen_resolution"
-            ],
-            [
-                2,
-                "weight_kg"
-            ],
-            [
-                2,
-                "battery_capacity_wh"
-            ],
-            [
-                3,
-                "test_id"
-            ],
-            [
-                3,
-                "computer_id"
-            ],
-            [
-                3,
-                "test_date"
-            ],
-            [
-                3,
-                "test_type"
-            ],
-            [
-                3,
-                "cpu_score"
-            ],
-            [
-                3,
-                "gpu_score"
-            ],
-            [
-                3,
-                "ram_score"
-            ],
-            [
-                3,
-                "storage_score"
-            ],
-            [
-                3,
-                "overall_score"
-            ],
-            [
-                3,
-                "temperature_celsius"
-            ],
-            [
-                3,
-                "power_consumption_watts"
-            ],
-            [
-                4,
-                "usage_id"
-            ],
-            [
-                4,
-                "computer_id"
-            ],
-            [
-                4,
-                "usage_date"
-            ],
-            [
-                4,
-                "usage_duration_hours"
-            ],
-            [
-                4,
-                "usage_type"
-            ],
-            [
-                4,
-                "cpu_usage_percent"
-            ],
-            [
-                4,
-                "gpu_usage_percent"
-            ],
-            [
-                4,
-                "ram_usage_percent"
-            ],
-            [
-                4,
-                "storage_usage_percent"
-            ],
-            [
-                4,
-                "power_consumption_watts"
-            ],
-            [
-                4,
-                "temperature_celsius"
-            ]
-        ],
-        "foreign_keys": [
-            {
-                "computer_id": [
-                    1,
-                    2
-                ]
-            },
-            {
-                "computer_id": [
-                    3,
-                    2
-                ]
-            },
-            {
-                "computer_id": [
-                    4,
-                    2
-                ]
-            }
-        ],
-        "primary_keys": [
-            {
-                "id": 0
-            },
-            {
-                "battery_usage_id": 1
-            },
-            {
-                "computer_id": 2
-            },
-            {
-                "test_id": 3
-            },
-            {
-                "usage_id": 4
-            }
-        ],
-        "table_names": [
-            "audio_data",
-            "battery_usage",
-            "computer_info",
-            "performance_tests",
-            "usage_records"
-        ],
-        "column_types": [
-            "int",
-            "varchar",
-            "varchar",
-            "float",
-            "int",
-            "int",
-            "varchar",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "int",
-            "varchar",
-            "varchar",
-            "int",
-            "varchar",
-            "int",
-            "int",
-            "decimal",
-            "decimal",
-            "int",
-            "varchar",
-            "int",
-            "varchar",
-            "varchar",
-            "int",
-            "decimal",
-            "varchar",
-            "decimal",
-            "decimal",
-            "int",
-            "int",
-            "varchar",
-            "varchar",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "int",
-            "int",
-            "varchar",
-            "decimal",
-            "varchar",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal"
-        ]
-    },
+
     {
         "db_id": "DataCollector",
         "column_names": [
@@ -4480,543 +3813,6 @@
         ]
     },
     {
-        "db_id": "EnergyManagementDB",
-        "column_names": [
-            [
-                -1,
-                "*"
-            ],
-            [
-                0,
-                "auditId"
-            ],
-            [
-                0,
-                "deviceId"
-            ],
-            [
-                0,
-                "auditDate"
-            ],
-            [
-                0,
-                "auditorName"
-            ],
-            [
-                0,
-                "auditResult"
-            ],
-            [
-                0,
-                "recommendations"
-            ],
-            [
-                0,
-                "dataQuality"
-            ],
-            [
-                1,
-                "consumptionId"
-            ],
-            [
-                1,
-                "deviceId"
-            ],
-            [
-                1,
-                "timestamp"
-            ],
-            [
-                1,
-                "energyConsumed"
-            ],
-            [
-                1,
-                "powerUsage"
-            ],
-            [
-                1,
-                "voltage"
-            ],
-            [
-                1,
-                "current"
-            ],
-            [
-                1,
-                "temperature"
-            ],
-            [
-                1,
-                "humidity"
-            ],
-            [
-                1,
-                "dataQuality"
-            ],
-            [
-                2,
-                "deviceId"
-            ],
-            [
-                2,
-                "deviceName"
-            ],
-            [
-                2,
-                "deviceType"
-            ],
-            [
-                2,
-                "powerRating"
-            ],
-            [
-                2,
-                "efficiency"
-            ],
-            [
-                2,
-                "installationDate"
-            ],
-            [
-                2,
-                "status"
-            ],
-            [
-                2,
-                "location"
-            ],
-            [
-                2,
-                "manufacturerId"
-            ],
-            [
-                2,
-                "lastMaintenanceDate"
-            ],
-            [
-                2,
-                "nextMaintenanceDate"
-            ],
-            [
-                2,
-                "humidity"
-            ],
-            [
-                2,
-                "voltage"
-            ],
-            [
-                2,
-                "current"
-            ],
-            [
-                3,
-                "efficiencyId"
-            ],
-            [
-                3,
-                "deviceId"
-            ],
-            [
-                3,
-                "timestamp"
-            ],
-            [
-                3,
-                "efficiency"
-            ],
-            [
-                3,
-                "energySaved"
-            ],
-            [
-                3,
-                "costSavings"
-            ],
-            [
-                3,
-                "dataQuality"
-            ],
-            [
-                4,
-                "forecastId"
-            ],
-            [
-                4,
-                "deviceId"
-            ],
-            [
-                4,
-                "timestamp"
-            ],
-            [
-                4,
-                "forecastType"
-            ],
-            [
-                4,
-                "forecastValue"
-            ],
-            [
-                4,
-                "confidenceLevel"
-            ],
-            [
-                4,
-                "dataQuality"
-            ],
-            [
-                5,
-                "policyId"
-            ],
-            [
-                5,
-                "policyName"
-            ],
-            [
-                5,
-                "description"
-            ],
-            [
-                5,
-                "effectiveDate"
-            ],
-            [
-                5,
-                "expiryDate"
-            ],
-            [
-                5,
-                "targetEfficiency"
-            ],
-            [
-                5,
-                "targetCarbonFootprint"
-            ],
-            [
-                5,
-                "status"
-            ],
-            [
-                6,
-                "impactId"
-            ],
-            [
-                6,
-                "deviceId"
-            ],
-            [
-                6,
-                "timestamp"
-            ],
-            [
-                6,
-                "carbonFootprint"
-            ],
-            [
-                6,
-                "energySource"
-            ],
-            [
-                6,
-                "pollutionLevel"
-            ],
-            [
-                6,
-                "waterUsage"
-            ],
-            [
-                6,
-                "landUsage"
-            ],
-            [
-                6,
-                "dataQuality"
-            ],
-            [
-                7,
-                "hypothesisId"
-            ],
-            [
-                7,
-                "deviceId"
-            ],
-            [
-                7,
-                "hypothesisText"
-            ],
-            [
-                7,
-                "status"
-            ],
-            [
-                7,
-                "verificationDate"
-            ],
-            [
-                7,
-                "verificationResult"
-            ],
-            [
-                7,
-                "dataQuality"
-            ],
-            [
-                8,
-                "maintenanceId"
-            ],
-            [
-                8,
-                "deviceId"
-            ],
-            [
-                8,
-                "maintenanceDate"
-            ],
-            [
-                8,
-                "maintenanceType"
-            ],
-            [
-                8,
-                "technicianName"
-            ],
-            [
-                8,
-                "technicianContact"
-            ],
-            [
-                8,
-                "cost"
-            ],
-            [
-                8,
-                "partsReplaced"
-            ],
-            [
-                8,
-                "maintenanceDescription"
-            ],
-            [
-                8,
-                "nextMaintenanceDate"
-            ],
-            [
-                9,
-                "manufacturerId"
-            ],
-            [
-                9,
-                "manufacturerName"
-            ],
-            [
-                9,
-                "contactPerson"
-            ],
-            [
-                9,
-                "contactEmail"
-            ],
-            [
-                9,
-                "contactPhone"
-            ],
-            [
-                9,
-                "address"
-            ],
-            [
-                9,
-                "city"
-            ],
-            [
-                9,
-                "country"
-            ],
-            [
-                9,
-                "website"
-            ],
-            [
-                9,
-                "revenue"
-            ],
-            [
-                9,
-                "profit"
-            ]
-        ],
-        "foreign_keys": [
-            {
-                "deviceId": [
-                    0,
-                    2
-                ]
-            },
-            {
-                "deviceId": [
-                    1,
-                    2
-                ]
-            },
-            {
-                "deviceId": [
-                    3,
-                    2
-                ]
-            },
-            {
-                "deviceId": [
-                    4,
-                    2
-                ]
-            },
-            {
-                "deviceId": [
-                    6,
-                    2
-                ]
-            },
-            {
-                "deviceId": [
-                    7,
-                    2
-                ]
-            },
-            {
-                "deviceId": [
-                    8,
-                    2
-                ]
-            },
-            {
-                "manufacturerId": [
-                    2,
-                    9
-                ]
-            }
-        ],
-        "primary_keys": [
-            {
-                "auditId": 0
-            },
-            {
-                "consumptionId": 1
-            },
-            {
-                "deviceId": 2
-            },
-            {
-                "efficiencyId": 3
-            },
-            {
-                "forecastId": 4
-            },
-            {
-                "policyId": 5
-            },
-            {
-                "impactId": 6
-            },
-            {
-                "hypothesisId": 7
-            },
-            {
-                "maintenanceId": 8
-            },
-            {
-                "manufacturerId": 9
-            }
-        ],
-        "table_names": [
-            "EnergyAudits",
-            "EnergyConsumption",
-            "EnergyDevices",
-            "EnergyEfficiency",
-            "EnergyForecasts",
-            "EnergyPolicies",
-            "EnvironmentalImpact",
-            "Hypotheses",
-            "MaintenanceRecords",
-            "Manufacturers"
-        ],
-        "column_types": [
-            "int",
-            "int",
-            "int",
-            "datetime",
-            "varchar",
-            "enum",
-            "text",
-            "enum",
-            "int",
-            "int",
-            "datetime",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "enum",
-            "int",
-            "int",
-            "varchar",
-            "enum",
-            "decimal",
-            "decimal",
-            "datetime",
-            "varchar",
-            "datetime",
-            "varchar",
-            "decimal",
-            "decimal",
-            "decimal",
-            "int",
-            "int",
-            "datetime",
-            "decimal",
-            "decimal",
-            "decimal",
-            "text",
-            "decimal",
-            "int",
-            "int",
-            "datetime",
-            "varchar",
-            "decimal",
-            "decimal",
-            "enum",
-            "decimal",
-            "int",
-            "int",
-            "datetime",
-            "varchar",
-            "decimal",
-            "text",
-            "text",
-            "datetime",
-            "int",
-            "int",
-            "datetime",
-            "varchar",
-            "varchar",
-            "text",
-            "text",
-            "datetime",
-            "int",
-            "varchar",
-            "varchar",
-            "varchar",
-            "varchar",
-            "varchar",
-            "varchar",
-            "varchar",
-            "decimal",
-            "decimal"
-        ]
-    },
-    {
         "db_id": "EquipmentManagementDB",
         "column_names": [
             [
@@ -5268,276 +4064,7 @@
             "varchar"
         ]
     },
-    {
-        "db_id": "gas",
-        "column_names": [
-            [
-                -1,
-                "*"
-            ],
-            [
-                0,
-                "Company_ID"
-            ],
-            [
-                0,
-                "Rank"
-            ],
-            [
-                0,
-                "Company"
-            ],
-            [
-                0,
-                "Headquarters"
-            ],
-            [
-                0,
-                "Main_Industry"
-            ],
-            [
-                0,
-                "Sales"
-            ],
-            [
-                0,
-                "Profits"
-            ],
-            [
-                0,
-                "Assets"
-            ],
-            [
-                0,
-                "Market_Value"
-            ],
-            [
-                0,
-                "Founded_Year"
-            ],
-            [
-                0,
-                "CEO"
-            ],
-            [
-                0,
-                "Number_Employees"
-            ],
-            [
-                0,
-                "Number_Branches"
-            ],
-            [
-                0,
-                "Revenue_Growth_Rate"
-            ],
-            [
-                0,
-                "Net_Profit_Margin"
-            ],
-            [
-                0,
-                "Debt_Equity_Ratio"
-            ],
-            [
-                0,
-                "Environmental_Score"
-            ],
-            [
-                0,
-                "Social_Score"
-            ],
-            [
-                1,
-                "Gas_ID"
-            ],
-            [
-                1,
-                "Station_ID"
-            ],
-            [
-                1,
-                "Fuel_Type"
-            ],
-            [
-                1,
-                "Brand"
-            ],
-            [
-                1,
-                "Supplier"
-            ],
-            [
-                1,
-                "Quality_Grade"
-            ],
-            [
-                1,
-                "Price_Liter"
-            ],
-            [
-                1,
-                "Tax_per_Liter"
-            ],
-            [
-                1,
-                "Stock_Liters"
-            ],
-            [
-                1,
-                "Minimum_Stock_Liters"
-            ],
-            [
-                1,
-                "Last_Delivery_Date"
-            ],
-            [
-                1,
-                "Next_Delivery_Date"
-            ],
-            [
-                1,
-                "Carbon_Emission"
-            ],
-            [
-                1,
-                "Sulfur_Content"
-            ],
-            [
-                2,
-                "Station_ID"
-            ],
-            [
-                2,
-                "Open_Year"
-            ],
-            [
-                2,
-                "Location"
-            ],
-            [
-                2,
-                "Manager_Name"
-            ],
-            [
-                2,
-                "Vice_Manager_Name"
-            ],
-            [
-                2,
-                "Representative_Name"
-            ],
-            [
-                2,
-                "Capacity_Liters"
-            ],
-            [
-                2,
-                "Service_Type"
-            ],
-            [
-                3,
-                "Station_ID"
-            ],
-            [
-                3,
-                "Company_ID"
-            ],
-            [
-                3,
-                "Rank_Year"
-            ]
-        ],
-        "foreign_keys": [
-            {
-                "Station_ID": [
-                    1,
-                    2
-                ]
-            },
-            {
-                "Station_ID": [
-                    3,
-                    2
-                ]
-            },
-            {
-                "Company_ID": [
-                    3,
-                    0
-                ]
-            }
-        ],
-        "primary_keys": [
-            {
-                "Company_ID": 0
-            },
-            {
-                "Gas_ID": 1
-            },
-            {
-                "Station_ID": 2
-            },
-            {
-                "Company_ID": 3
-            }
-        ],
-        "table_names": [
-            "company",
-            "gas",
-            "gas_station",
-            "station_company"
-        ],
-        "column_types": [
-            "int",
-            "int",
-            "int",
-            "text",
-            "text",
-            "text",
-            "float",
-            "float",
-            "float",
-            "float",
-            "int",
-            "varchar",
-            "int",
-            "int",
-            "float",
-            "float",
-            "float",
-            "float",
-            "float",
-            "int",
-            "int",
-            "varchar",
-            "varchar",
-            "varchar",
-            "varchar",
-            "varchar",
-            "float",
-            "varchar",
-            "float",
-            "float",
-            "varchar",
-            "float",
-            "float",
-            "float",
-            "float",
-            "float",
-            "float",
-            "int",
-            "varchar",
-            "varchar",
-            "varchar",
-            "varchar",
-            "float",
-            "varchar",
-            "int",
-            "int",
-            "int"
-        ]
-    },
+
     {
         "db_id": "generators",
         "column_names": [
@@ -6112,510 +4639,7 @@
             "decimal"
         ]
     },
-    {
-        "db_id": "lawnmower",
-        "column_names": [
-            [
-                -1,
-                "*"
-            ],
-            [
-                0,
-                "Customer_ID"
-            ],
-            [
-                0,
-                "Name"
-            ],
-            [
-                0,
-                "Email"
-            ],
-            [
-                0,
-                "Phone"
-            ],
-            [
-                0,
-                "Address"
-            ],
-            [
-                0,
-                "City"
-            ],
-            [
-                0,
-                "State"
-            ],
-            [
-                0,
-                "Country"
-            ],
-            [
-                0,
-                "Postal_Code"
-            ],
-            [
-                0,
-                "Registration_Date"
-            ],
-            [
-                0,
-                "Customer_Type"
-            ],
-            [
-                0,
-                "Annual_Purchase_Volume"
-            ],
-            [
-                1,
-                "Mower_ID"
-            ],
-            [
-                1,
-                "Manufacturer_ID"
-            ],
-            [
-                1,
-                "Model"
-            ],
-            [
-                1,
-                "Year"
-            ],
-            [
-                1,
-                "Weight"
-            ],
-            [
-                1,
-                "Cutting_Width"
-            ],
-            [
-                1,
-                "Cutting_Height_Adjustment"
-            ],
-            [
-                1,
-                "Power_Source"
-            ],
-            [
-                1,
-                "Engine_Power"
-            ],
-            [
-                1,
-                "Battery_Capacity"
-            ],
-            [
-                1,
-                "Run_Time"
-            ],
-            [
-                1,
-                "Wheel_Size"
-            ],
-            [
-                1,
-                "Price"
-            ],
-            [
-                1,
-                "Blade_Material"
-            ],
-            [
-                1,
-                "Blade_Length"
-            ],
-            [
-                1,
-                "Blade_Weight"
-            ],
-            [
-                1,
-                "Blade_Angle"
-            ],
-            [
-                1,
-                "Ground_Clearance"
-            ],
-            [
-                1,
-                "Turning_Radius"
-            ],
-            [
-                2,
-                "Maintenance_ID"
-            ],
-            [
-                2,
-                "Mower_ID"
-            ],
-            [
-                2,
-                "Maintenance_Date"
-            ],
-            [
-                2,
-                "Maintenance_Type"
-            ],
-            [
-                2,
-                "Cost"
-            ],
-            [
-                2,
-                "Description"
-            ],
-            [
-                2,
-                "Service_Center"
-            ],
-            [
-                2,
-                "Technician"
-            ],
-            [
-                2,
-                "Next_Maintenance_Date"
-            ],
-            [
-                2,
-                "Labor_Cost"
-            ],
-            [
-                2,
-                "Parts_Cost"
-            ],
-            [
-                3,
-                "Manufacturer_ID"
-            ],
-            [
-                3,
-                "Name"
-            ],
-            [
-                3,
-                "Country"
-            ],
-            [
-                3,
-                "Founded_Year"
-            ],
-            [
-                3,
-                "Revenue"
-            ],
-            [
-                3,
-                "Employee_Count"
-            ],
-            [
-                3,
-                "Market_Cap"
-            ],
-            [
-                3,
-                "Production_Volume_Total"
-            ],
-            [
-                3,
-                "R&D_Spending"
-            ],
-            [
-                3,
-                "Profit_Margin"
-            ],
-            [
-                3,
-                "Website"
-            ],
-            [
-                3,
-                "Headquarters"
-            ],
-            [
-                3,
-                "CEO"
-            ],
-            [
-                4,
-                "Performance_ID"
-            ],
-            [
-                4,
-                "Mower_ID"
-            ],
-            [
-                4,
-                "Cutting_Efficiency"
-            ],
-            [
-                4,
-                "Noise_Level"
-            ],
-            [
-                4,
-                "Fuel_Consumption"
-            ],
-            [
-                4,
-                "Battery_Life"
-            ],
-            [
-                4,
-                "Vibration_Level"
-            ],
-            [
-                4,
-                "Blade_Speed"
-            ],
-            [
-                4,
-                "Mulching_Capability"
-            ],
-            [
-                4,
-                "Self_Propelled"
-            ],
-            [
-                4,
-                "Slope_Handling"
-            ],
-            [
-                4,
-                "Energy_Efficiency"
-            ],
-            [
-                4,
-                "Torque"
-            ],
-            [
-                4,
-                "Acceleration"
-            ],
-            [
-                4,
-                "Deceleration"
-            ],
-            [
-                5,
-                "Sale_ID"
-            ],
-            [
-                5,
-                "Mower_ID"
-            ],
-            [
-                5,
-                "Sale_Date"
-            ],
-            [
-                5,
-                "Sale_Price"
-            ],
-            [
-                5,
-                "Quantity"
-            ],
-            [
-                5,
-                "Customer_ID"
-            ],
-            [
-                5,
-                "Discount"
-            ],
-            [
-                5,
-                "Tax_Rate"
-            ],
-            [
-                5,
-                "Total_Price"
-            ],
-            [
-                5,
-                "Payment_Method"
-            ],
-            [
-                5,
-                "Shipping_Cost"
-            ],
-            [
-                5,
-                "Warranty_Period"
-            ],
-            [
-                6,
-                "Customer_ID"
-            ],
-            [
-                6,
-                "Manufacturer_ID"
-            ]
-        ],
-        "foreign_keys": [
-            {
-                "Manufacturer_ID": [
-                    1,
-                    3
-                ]
-            },
-            {
-                "Mower_ID": [
-                    2,
-                    1
-                ]
-            },
-            {
-                "Mower_ID": [
-                    4,
-                    1
-                ]
-            },
-            {
-                "Customer_ID": [
-                    5,
-                    0
-                ]
-            },
-            {
-                "Mower_ID": [
-                    5,
-                    1
-                ]
-            },
-            {
-                "Customer_ID": [
-                    0,
-                    5
-                ]
-            }
-        ],
-        "primary_keys": [
-            {
-                "Customer_ID": 0
-            },
-            {
-                "Mower_ID": 1
-            },
-            {
-                "Maintenance_ID": 2
-            },
-            {
-                "Manufacturer_ID": 3
-            },
-            {
-                "Performance_ID": 4
-            },
-            {
-                "Sale_ID": 5
-            }
-        ],
-        "table_names": [
-            "customers",
-            "lawn_mowers",
-            "maintenance",
-            "manufacturers",
-            "performance_metrics",
-            "sales"
-        ],
-        "column_types": [
-            "int",
-            "int",
-            "varchar",
-            "varchar",
-            "varchar",
-            "varchar",
-            "varchar",
-            "varchar",
-            "varchar",
-            "varchar",
-            "varchar",
-            "decimal",
-            "int",
-            "int",
-            "varchar",
-            "varchar",
-            "decimal",
-            "decimal",
-            "varchar",
-            "decimal",
-            "decimal",
-            "int",
-            "decimal",
-            "decimal",
-            "varchar",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "int",
-            "int",
-            "varchar",
-            "int",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "int",
-            "int",
-            "varchar",
-            "int",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "int",
-            "int",
-            "decimal",
-            "decimal",
-            "varchar",
-            "decimal",
-            "decimal",
-            "tinyint",
-            "tinyint",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "int",
-            "int",
-            "decimal",
-            "decimal",
-            "int",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "varchar",
-            "decimal",
-            "int"
-        ]
-    },
+
     {
         "db_id": "mouse",
         "column_names": [
@@ -7908,762 +5932,6 @@
         ]
     },
     {
-        "db_id": "PhysicsLabDB",
-        "column_names": [
-            [
-                -1,
-                "*"
-            ],
-            [
-                0,
-                "calculationId"
-            ],
-            [
-                0,
-                "experimentId"
-            ],
-            [
-                0,
-                "formula"
-            ],
-            [
-                0,
-                "inputData"
-            ],
-            [
-                0,
-                "result"
-            ],
-            [
-                0,
-                "unit"
-            ],
-            [
-                0,
-                "dataQuality"
-            ],
-            [
-                1,
-                "constraintId"
-            ],
-            [
-                1,
-                "experimentId"
-            ],
-            [
-                1,
-                "constraintText"
-            ],
-            [
-                1,
-                "constraintType"
-            ],
-            [
-                1,
-                "dataQuality"
-            ],
-            [
-                2,
-                "deviceType"
-            ],
-            [
-                2,
-                "maintenanceCost"
-            ],
-            [
-                3,
-                "deviceId"
-            ],
-            [
-                3,
-                "deviceName"
-            ],
-            [
-                3,
-                "deviceType"
-            ],
-            [
-                3,
-                "calibrationDate"
-            ],
-            [
-                3,
-                "status"
-            ],
-            [
-                3,
-                "labId"
-            ],
-            [
-                3,
-                "supplierId"
-            ],
-            [
-                3,
-                "warrantyEndDate"
-            ],
-            [
-                3,
-                "purchaseDate"
-            ],
-            [
-                3,
-                "itemName"
-            ],
-            [
-                3,
-                "specifications"
-            ],
-            [
-                3,
-                "storageLocation"
-            ],
-            [
-                3,
-                "itemId"
-            ],
-            [
-                3,
-                "placeId"
-            ],
-            [
-                3,
-                "serialNumber"
-            ],
-            [
-                3,
-                "warrantyPeriod"
-            ],
-            [
-                3,
-                "energyConsumption"
-            ],
-            [
-                3,
-                "power"
-            ],
-            [
-                3,
-                "powerRating"
-            ],
-            [
-                3,
-                "current"
-            ],
-            [
-                3,
-                "installationDate"
-            ],
-            [
-                3,
-                "locationId"
-            ],
-            [
-                3,
-                "weightKg"
-            ],
-            [
-                3,
-                "lastMaintenanceDate"
-            ],
-            [
-                3,
-                "flemId"
-            ],
-            [
-                4,
-                "deviceId"
-            ],
-            [
-                4,
-                "energyConsumed"
-            ],
-            [
-                4,
-                "consumptionDate"
-            ],
-            [
-                5,
-                "dataId"
-            ],
-            [
-                5,
-                "experimentId"
-            ],
-            [
-                5,
-                "deviceId"
-            ],
-            [
-                5,
-                "timestamp"
-            ],
-            [
-                5,
-                "measurementValue"
-            ],
-            [
-                5,
-                "unit"
-            ],
-            [
-                5,
-                "dataQuality"
-            ],
-            [
-                5,
-                "environmentalConditions"
-            ],
-            [
-                6,
-                "experimentId"
-            ],
-            [
-                6,
-                "experimentName"
-            ],
-            [
-                6,
-                "description"
-            ],
-            [
-                6,
-                "startDate"
-            ],
-            [
-                6,
-                "endDate"
-            ],
-            [
-                6,
-                "status"
-            ],
-            [
-                6,
-                "hypothesis"
-            ],
-            [
-                6,
-                "objective"
-            ],
-            [
-                6,
-                "researcherId"
-            ],
-            [
-                6,
-                "labId"
-            ],
-            [
-                7,
-                "hypothesisId"
-            ],
-            [
-                7,
-                "experimentId"
-            ],
-            [
-                7,
-                "hypothesisText"
-            ],
-            [
-                7,
-                "status"
-            ],
-            [
-                7,
-                "verificationDate"
-            ],
-            [
-                7,
-                "verificationResult"
-            ],
-            [
-                7,
-                "dataQuality"
-            ],
-            [
-                8,
-                "labId"
-            ],
-            [
-                8,
-                "labName"
-            ],
-            [
-                8,
-                "location"
-            ],
-            [
-                8,
-                "capacity"
-            ],
-            [
-                8,
-                "equipmentCount"
-            ],
-            [
-                8,
-                "status"
-            ],
-            [
-                9,
-                "maintenanceId"
-            ],
-            [
-                9,
-                "deviceId"
-            ],
-            [
-                9,
-                "maintenanceDate"
-            ],
-            [
-                9,
-                "description"
-            ],
-            [
-                10,
-                "placeId"
-            ],
-            [
-                10,
-                "country"
-            ],
-            [
-                11,
-                "researcherId"
-            ],
-            [
-                11,
-                "researcherName"
-            ],
-            [
-                11,
-                "email"
-            ],
-            [
-                11,
-                "phone"
-            ],
-            [
-                11,
-                "department"
-            ],
-            [
-                11,
-                "role"
-            ],
-            [
-                11,
-                "joinDate"
-            ],
-            [
-                12,
-                "analysisId"
-            ],
-            [
-                12,
-                "experimentId"
-            ],
-            [
-                12,
-                "variableId"
-            ],
-            [
-                12,
-                "sensitivityValue"
-            ],
-            [
-                12,
-                "impact"
-            ],
-            [
-                12,
-                "dataQuality"
-            ],
-            [
-                13,
-                "sensorId"
-            ],
-            [
-                13,
-                "sensorType"
-            ],
-            [
-                13,
-                "dataCollectionFrequency"
-            ],
-            [
-                14,
-                "supplierId"
-            ],
-            [
-                14,
-                "supplierName"
-            ],
-            [
-                14,
-                "contactInfo"
-            ],
-            [
-                15,
-                "recordId"
-            ],
-            [
-                15,
-                "sensorId"
-            ],
-            [
-                15,
-                "recordedAt"
-            ],
-            [
-                15,
-                "temperature"
-            ],
-            [
-                16,
-                "variableId"
-            ],
-            [
-                16,
-                "experimentId"
-            ],
-            [
-                16,
-                "variableName"
-            ],
-            [
-                16,
-                "initialValue"
-            ],
-            [
-                16,
-                "unit"
-            ],
-            [
-                16,
-                "dataQuality"
-            ]
-        ],
-        "foreign_keys": [
-            {
-                "experimentId": [
-                    0,
-                    6
-                ]
-            },
-            {
-                "experimentId": [
-                    1,
-                    6
-                ]
-            },
-            {
-                "labId": [
-                    3,
-                    8
-                ]
-            },
-            {
-                "supplierId": [
-                    3,
-                    14
-                ]
-            },
-            {
-                "placeId": [
-                    3,
-                    10
-                ]
-            },
-            {
-                "deviceId": [
-                    4,
-                    3
-                ]
-            },
-            {
-                "experimentId": [
-                    5,
-                    6
-                ]
-            },
-            {
-                "deviceId": [
-                    5,
-                    3
-                ]
-            },
-            {
-                "researcherId": [
-                    6,
-                    11
-                ]
-            },
-            {
-                "labId": [
-                    6,
-                    8
-                ]
-            },
-            {
-                "hypothesisId": [
-                    7,
-                    6
-                ]
-            },
-            {
-                "deviceId": [
-                    9,
-                    3
-                ]
-            },
-            {
-                "experimentId": [
-                    12,
-                    6
-                ]
-            },
-            {
-                "variableId": [
-                    12,
-                    16
-                ]
-            },
-            {
-                "sensorId": [
-                    15,
-                    13
-                ]
-            },
-            {
-                "experimentId": [
-                    16,
-                    6
-                ]
-            }
-        ],
-        "primary_keys": [
-            {
-                "calculationId": 0
-            },
-            {
-                "constraintId": 1
-            },
-            {
-                "deviceType": 2
-            },
-            {
-                "deviceId": 3
-            },
-            {
-                "deviceId": 4
-            },
-            {
-                "dataId": 5
-            },
-            {
-                "experimentId": 6
-            },
-            {
-                "hypothesisId": 7
-            },
-            {
-                "labId": 8
-            },
-            {
-                "maintenanceId": 9
-            },
-            {
-                "placeId": 10
-            },
-            {
-                "researcherId": 11
-            },
-            {
-                "analysisId": 12
-            },
-            {
-                "sensorId": 13
-            },
-            {
-                "supplierId": 14
-            },
-            {
-                "recordId": 15
-            },
-            {
-                "variableId": 16
-            }
-        ],
-        "table_names": [
-            "Calculations",
-            "Constraints",
-            "DeviceTypes",
-            "Devices",
-            "EnergyConsumption",
-            "ExperimentData",
-            "Experiments",
-            "Hypotheses",
-            "Labs",
-            "MaintenanceRecords",
-            "Places",
-            "Researchers",
-            "SensitivityAnalysis",
-            "Sensors",
-            "Suppliers",
-            "TemperatureReadings",
-            "Variables"
-        ],
-        "column_types": [
-            "int",
-            "int",
-            "int",
-            "text",
-            "text",
-            "decimal(10,2)",
-            "varchar(50)",
-            "enum('��','��','��')",
-            "int",
-            "int",
-            "text",
-            "enum('��ʽ','����ʽ')",
-            "enum('��','��','��')",
-            "varchar(255)",
-            "enum('ʾ����','������','����')",
-            "datetime",
-            "enum('����','����')",
-            "int",
-            "int",
-            "varchar(255)",
-            "varchar(255)",
-            "varchar(255)",
-            "varchar(255)",
-            "varchar(255)",
-            "int",
-            "int",
-            "date",
-            "date",
-            "int",
-            "int",
-            "decimal(10,2)",
-            "int",
-            "int",
-            "decimal(10,2)",
-            "date",
-            "int",
-            "decimal(10,2)",
-            "varchar(255)",
-            "int",
-            "int",
-            "datetime",
-            "decimal(10,2)",
-            "date",
-            "varchar(50)",
-            "enum('��','��','��')",
-            "int",
-            "int",
-            "varchar(255)",
-            "text",
-            "text",
-            "enum('������','�����')",
-            "text",
-            "text",
-            "int",
-            "int",
-            "enum('����','�ر�')",
-            "int",
-            "int",
-            "date",
-            "text",
-            "int",
-            "int",
-            "int",
-            "datetime",
-            "float",
-            "int",
-            "int",
-            "varchar(255)",
-            "decimal(10,2)",
-            "varchar(50)",
-            "enum('��','��','��')",
-            "int",
-            "int",
-            "varchar(255)",
-            "enum('ʾ����','������','����')",
-            "datetime",
-            "enum('����','����')",
-            "int",
-            "int",
-            "varchar(255)",
-            "varchar(255)",
-            "varchar(255)",
-            "varchar(255)",
-            "varchar(255)",
-            "int",
-            "int",
-            "date",
-            "date",
-            "int",
-            "int",
-            "decimal(10,2)",
-            "int",
-            "int",
-            "decimal(10,2)",
-            "date",
-            "int",
-            "decimal(10,2)",
-            "varchar(255)",
-            "int",
-            "int",
-            "int",
-            "enum('��','��','��')",
-            "int",
-            "int",
-            "datetime",
-            "float",
-            "int",
-            "int",
-            "varchar(255)",
-            "decimal(10,2)",
-            "varchar(50)",
-            "enum('��','��','��')",
-            "int",
-            "int",
-            "varchar(255)",
-            "enum('ʾ����','������','����')",
-            "datetime",
-            "enum('����','����')",
-            "int",
-            "int",
-            "varchar(255)",
-            "varchar(255)",
-            "varchar(255)",
-            "varchar(255)",
-            "varchar(255)",
-            "int",
-            "int",
-            "date",
-            "date",
-            "int",
-            "int",
-            "decimal(10,2)",
-            "int",
-            "int",
-            "decimal(10,2)",
-            "date",
-            "int",
-            "decimal(10,2)",
-            "varchar(255)",
-            "int",
-            "int",
-            "int",
-            "enum('��','��','��')"
-        ]
-    },
-    {
         "db_id": "printer",
         "column_names": [
             [
@@ -9783,247 +7051,7 @@
             "datetime"
         ]
     },
-    {
-        "db_id": "RainGauge",
-        "column_names": [
-            [
-                -1,
-                "*"
-            ],
-            [
-                0,
-                "Id"
-            ],
-            [
-                0,
-                "GaugeId"
-            ],
-            [
-                0,
-                "AnalysisTime"
-            ],
-            [
-                0,
-                "DataStartTime"
-            ],
-            [
-                0,
-                "DataEndTime"
-            ],
-            [
-                0,
-                "TotalRainfallMm"
-            ],
-            [
-                0,
-                "AverageRainfallIntensityMmH"
-            ],
-            [
-                0,
-                "MaxRainfallIntensityMmH"
-            ],
-            [
-                0,
-                "MinRainfallIntensityMmH"
-            ],
-            [
-                0,
-                "AnalysisResult"
-            ],
-            [
-                1,
-                "Id"
-            ],
-            [
-                1,
-                "GaugeModel"
-            ],
-            [
-                1,
-                "InstallationLocation"
-            ],
-            [
-                1,
-                "ManufactureDate"
-            ],
-            [
-                1,
-                "InstallationDate"
-            ],
-            [
-                1,
-                "Manufacturer"
-            ],
-            [
-                1,
-                "Status"
-            ],
-            [
-                1,
-                "Latitude"
-            ],
-            [
-                1,
-                "Longitude"
-            ],
-            [
-                1,
-                "ElevationMeters"
-            ],
-            [
-                1,
-                "Notes"
-            ],
-            [
-                2,
-                "Id"
-            ],
-            [
-                2,
-                "GaugeId"
-            ],
-            [
-                2,
-                "CollectionTime"
-            ],
-            [
-                2,
-                "RainfallMm"
-            ],
-            [
-                2,
-                "RainfallIntensityMmH"
-            ],
-            [
-                2,
-                "TemperatureCelsius"
-            ],
-            [
-                2,
-                "HumidityPercent"
-            ],
-            [
-                2,
-                "WindSpeedMps"
-            ],
-            [
-                2,
-                "WindDirectionDegrees"
-            ],
-            [
-                2,
-                "AtmosphericPressureHpa"
-            ],
-            [
-                2,
-                "Notes"
-            ],
-            [
-                3,
-                "Id"
-            ],
-            [
-                3,
-                "RuleName"
-            ],
-            [
-                3,
-                "ParameterType"
-            ],
-            [
-                3,
-                "ThresholdValue"
-            ],
-            [
-                3,
-                "ThresholdUnit"
-            ],
-            [
-                3,
-                "ConditionOperator"
-            ],
-            [
-                3,
-                "SeverityLevel"
-            ],
-            [
-                3,
-                "ActionType"
-            ],
-            [
-                3,
-                "RuleDescription"
-            ],
-            [
-                3,
-                "IsActive"
-            ]
-        ],
-        "foreign_keys": [],
-        "primary_keys": [
-            {
-                "Id": 0
-            },
-            {
-                "Id": 1
-            },
-            {
-                "Id": 2
-            },
-            {
-                "Id": 3
-            }
-        ],
-        "table_names": [
-            "HistoricalRainfallAnalysis",
-            "RainGauge",
-            "RainfallData",
-            "RainfallWarningRule"
-        ],
-        "column_types": [
-            "int",
-            "int",
-            "varchar",
-            "varchar",
-            "varchar",
-            "varchar",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "text",
-            "int",
-            "varchar",
-            "varchar",
-            "varchar",
-            "varchar",
-            "varchar",
-            "varchar",
-            "decimal",
-            "decimal",
-            "text",
-            "int",
-            "varchar",
-            "int",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "decimal",
-            "text",
-            "int",
-            "varchar",
-            "varchar",
-            "decimal",
-            "varchar",
-            "varchar",
-            "int",
-            "varchar",
-            "text",
-            "tinyint"
-        ]
-    },
+
     {
         "db_id": "rice_cooker",
         "column_names": [
@@ -14335,6 +11363,482 @@
             "decimal",
             "varchar",
             "int"
+        ]
+    },
+    {
+        "db_id": "school",
+        "column_names": [
+            [-1, "*"],
+            [0, "address_id"],
+            [0, "line_1_number_building"],
+            [0, "city"],
+            [0, "zip_postcode"],
+            [0, "state_province_county"],
+            [0, "country"],
+            [1, "customer_id"],
+            [1, "datetime_payment"],
+            [1, "payment_method_code"],
+            [1, "amount_payment"],
+            [2, "customer_id"],
+            [2, "customer_address_id"],
+            [2, "customer_status_code"],
+            [2, "date_became_customer"],
+            [2, "date_of_birth"],
+            [2, "first_name"],
+            [2, "last_name"],
+            [2, "amount_outstanding"],
+            [2, "email_address"],
+            [2, "phone_number"],
+            [2, "cell_mobile_phone_number"],
+            [3, "lesson_id"],
+            [3, "customer_id"],
+            [3, "lesson_status_code"],
+            [3, "staff_id"],
+            [3, "vehicle_id"],
+            [3, "lesson_date"],
+            [3, "lesson_time"],
+            [3, "price"],
+            [4, "staff_id"],
+            [4, "staff_address_id"],
+            [4, "nickname"],
+            [4, "first_name"],
+            [4, "middle_name"],
+            [4, "last_name"],
+            [4, "date_of_birth"],
+            [4, "date_jointed_staff"],
+            [4, "date_left_staff"],
+            [5, "vehicle_id"],
+            [5, "vehicle_details"]
+        ],
+        "foreign_keys": [
+            {
+                "customer_id": [1, 2]
+            },
+            {
+                "customer_address_id": [2, 0]
+            },
+            {
+                "customer_id": [3, 2]
+            },
+            {
+                "vehicle_id": [3, 5]
+            },
+            {
+                "staff_id": [3, 4]
+            },
+            {
+                "staff_address_id": [4, 0]
+            }
+        ],
+        "primary_keys": [
+            {"address_id": 0},
+            {"customer_id": 1, "datetime_payment": 1},
+            {"customer_id": 2},
+            {"lesson_id": 3},
+            {"staff_id": 4},
+            {"vehicle_id": 5}
+        ],
+        "table_names": [
+            "Addresses",
+            "Customer_Payments",
+            "Customers",
+            "Lessons",
+            "Staff",
+            "Vehicles"
+        ],
+        "column_types": [
+            "int", "varchar", "varchar", "varchar", "varchar", "varchar",
+            "int", "datetime", "varchar", "double",
+            "int", "int", "varchar", "datetime", "datetime", "varchar", "varchar", "double", "varchar", "varchar", "varchar",
+            "int", "int", "varchar", "int", "int", "datetime", "varchar", "double",
+            "int", "int", "varchar", "varchar", "varchar", "varchar", "datetime", "datetime", "datetime",
+            "int", "varchar"
+        ]
+    },
+    {
+        "db_id": "contract",
+        "column_names": [
+            [-1, "*"],
+            [0, "address_id"],
+            [0, "line_1_number_building"],
+            [0, "city"],
+            [0, "zip_postcode"],
+            [0, "state_province_county"],
+            [0, "country"],
+            [1, "contact_id"],
+            [1, "customer_id"],
+            [1, "gender"],
+            [1, "first_name"],
+            [1, "last_name"],
+            [1, "contact_phone"],
+            [2, "customer_id"],
+            [2, "address_id"],
+            [2, "date_from"],
+            [2, "date_to"],
+            [3, "order_id"],
+            [3, "customer_id"],
+            [3, "order_date"],
+            [3, "order_status_code"],
+            [4, "customer_id"],
+            [4, "payment_method_code"],
+            [4, "customer_number"],
+            [4, "customer_name"],
+            [4, "customer_address"],
+            [4, "customer_phone"],
+            [4, "customer_email"],
+            [5, "order_item_id"],
+            [5, "order_id"],
+            [5, "product_id"],
+            [5, "order_quantity"],
+            [6, "product_id"],
+            [6, "product_type_code"],
+            [6, "product_name"],
+            [6, "product_price"]
+        ],
+        "foreign_keys": [
+            {"customer_id": [1, 4]},
+            {"customer_id": [2, 4]},
+            {"address_id": [2, 0]},
+            {"customer_id": [3, 4]},
+            {"order_id": [5, 3]},
+            {"product_id": [5, 6]}
+        ],
+        "primary_keys": [
+            {"address_id": 0},
+            {"contact_id": 1},
+            {"customer_id": 2, "address_id": 2},
+            {"order_id": 3},
+            {"customer_id": 4},
+            {"order_item_id": 5},
+            {"product_id": 6}
+        ],
+        "table_names": [
+            "Addresses",
+            "Contacts",
+            "Customer_Address_History",
+            "Customer_Orders",
+            "Customers",
+            "Order_Items",
+            "Products"
+        ],
+        "column_types": [
+            "int", "varchar", "varchar", "varchar", "varchar", "varchar",
+            "int", "int", "varchar", "varchar", "varchar", "varchar",
+            "int", "int", "datetime", "datetime",
+            "int", "int", "datetime", "varchar",
+            "int", "varchar", "varchar", "varchar", "varchar", "varchar", "varchar",
+            "int", "int", "int", "varchar",
+            "int", "varchar", "varchar", "double"
+        ]
+    },
+    {
+        "db_id": "exerciseclub",
+        "column_names": [
+            [-1, "*"],
+            [0, "Club_ID"],
+            [0, "Club_name"],
+            [0, "Region"],
+            [0, "Start_year"],
+            [1, "Coach_ID"],
+            [1, "Coach_name"],
+            [1, "Gender"],
+            [1, "Club_ID"],
+            [1, "Rank"],
+            [2, "Rank"],
+            [2, "Club_ID"],
+            [2, "Gold"],
+            [2, "Big_Silver"],
+            [2, "Small_Silver"],
+            [2, "Bronze"],
+            [2, "Points"],
+            [3, "Player_ID"],
+            [3, "Sponsor_name"],
+            [3, "Player_name"],
+            [3, "Gender"],
+            [3, "Residence"],
+            [3, "Occupation"],
+            [3, "Votes"],
+            [3, "Rank"],
+            [4, "Player_ID"],
+            [4, "Coach_ID"],
+            [4, "Starting_year"]
+        ],
+        "foreign_keys": [
+            {"Club_ID": [1, 0]},
+            {"Club_ID": [2, 0]},
+            {"Player_ID": [4, 3]},
+            {"Coach_ID": [4, 1]}
+        ],
+        "primary_keys": [
+            {"Club_ID": 0},
+            {"Coach_ID": 1},
+            {"Rank": 2, "Club_ID": 2},
+            {"Player_ID": 3},
+            {"Player_ID": 4, "Coach_ID": 4}
+        ],
+        "table_names": [
+            "club",
+            "coach",
+            "match_result",
+            "player",
+            "player_coach"
+        ],
+        "column_types": [
+            "int", "text", "text", "int",
+            "int", "text", "text", "int", "int",
+            "int", "int", "int", "int", "int", "int", "int",
+            "int", "text", "text", "text", "text", "text", "int", "text",
+            "int", "int", "int"
+        ]
+    },
+    {
+        "db_id": "hospital",
+        "column_names": [
+            [-1, "*"],
+            [0, "Physician"],
+            [0, "Department"],
+            [0, "PrimaryAffiliation"],
+            [1, "AppointmentID"],
+            [1, "Patient"],
+            [1, "PrepNurse"],
+            [1, "Physician"],
+            [1, "Start"],
+            [1, "End"],
+            [1, "ExaminationRoom"],
+            [2, "BlockFloor"],
+            [2, "BlockCode"],
+            [3, "DepartmentID"],
+            [3, "Name"],
+            [3, "Head"],
+            [4, "Code"],
+            [4, "Name"],
+            [4, "Brand"],
+            [4, "Description"],
+            [5, "EmployeeID"],
+            [5, "Name"],
+            [5, "Position"],
+            [5, "Registered"],
+            [5, "SSN"],
+            [6, "Nurse"],
+            [6, "BlockFloor"],
+            [6, "BlockCode"],
+            [6, "OnCallStart"],
+            [6, "OnCallEnd"],
+            [7, "SSN"],
+            [7, "Name"],
+            [7, "Address"],
+            [7, "Phone"],
+            [7, "InsuranceID"],
+            [7, "PCP"],
+            [8, "EmployeeID"],
+            [8, "Name"],
+            [8, "Position"],
+            [8, "SSN"],
+            [9, "Physician"],
+            [9, "Patient"],
+            [9, "Medication"],
+            [9, "Date"],
+            [9, "Appointment"],
+            [9, "Dose"],
+            [10, "Code"],
+            [10, "Name"],
+            [10, "Cost"],
+            [11, "RoomNumber"],
+            [11, "RoomType"],
+            [11, "BlockFloor"],
+            [11, "BlockCode"],
+            [11, "Unavailable"],
+            [12, "StayID"],
+            [12, "Patient"],
+            [12, "Room"],
+            [12, "StayStart"],
+            [12, "StayEnd"],
+            [13, "Physician"],
+            [13, "Treatment"],
+            [13, "CertificationDate"],
+            [13, "CertificationExpires"],
+            [14, "Patient"],
+            [14, "Procedures"],
+            [14, "Stay"],
+            [14, "DateUndergoes"],
+            [14, "Physician"],
+            [14, "AssistingNurse"]
+        ],
+        "foreign_keys": [
+            {"Physician": [0, 8]},
+            {"Department": [0, 3]},
+            {"Patient": [1, 7]},
+            {"PrepNurse": [1, 5]},
+            {"Physician": [1, 8]},
+            {"Head": [3, 8]},
+            {"Nurse": [6, 5]},
+            {"BlockFloor": [6, 2], "BlockCode": [6, 2]},
+            {"PCP": [7, 8]},
+            {"Physician": [9, 8]},
+            {"Patient": [9, 7]},
+            {"Medication": [9, 4]},
+            {"Appointment": [9, 1]},
+            {"BlockFloor": [11, 2], "BlockCode": [11, 2]},
+            {"Patient": [12, 7]},
+            {"Room": [12, 11]},
+            {"Physician": [13, 8]},
+            {"Treatment": [13, 10]},
+            {"Patient": [14, 7]},
+            {"Procedures": [14, 10]},
+            {"Stay": [14, 12]},
+            {"Physician": [14, 8]},
+            {"AssistingNurse": [14, 5]}
+        ],
+        "primary_keys": [
+            {"Physician": 0, "Department": 0},
+            {"AppointmentID": 1},
+            {"BlockFloor": 2, "BlockCode": 2},
+            {"DepartmentID": 3},
+            {"Code": 4},
+            {"EmployeeID": 5},
+            {"Nurse": 6, "BlockFloor": 6, "BlockCode": 6, "OnCallStart": 6, "OnCallEnd": 6},
+            {"SSN": 7},
+            {"EmployeeID": 8},
+            {"Physician": 9, "Patient": 9, "Medication": 9, "Date": 9},
+            {"Code": 10},
+            {"RoomNumber": 11},
+            {"StayID": 12},
+            {"Physician": 13, "Treatment": 13},
+            {"Patient": 14, "Procedures": 14, "Stay": 14, "DateUndergoes": 14}
+        ],
+        "table_names": [
+            "Affiliated_With",
+            "Appointment",
+            "Block",
+            "Department",
+            "Medication",
+            "Nurse",
+            "On_Call",
+            "Patient",
+            "Physician",
+            "Prescribes",
+            "Procedures",
+            "Room",
+            "Stay",
+            "Trained_In",
+            "Undergoes"
+        ],
+        "column_types": [
+            "int", "int", "boolean",
+            "int", "int", "int", "int", "datetime", "datetime", "text",
+            "int", "int",
+            "int", "varchar", "int",
+            "int", "varchar", "varchar", "varchar",
+            "int", "varchar", "varchar", "boolean", "int",
+            "int", "int", "int", "datetime", "datetime",
+            "int", "varchar", "varchar", "varchar", "int", "int",
+            "int", "varchar", "varchar", "int",
+            "int", "int", "int", "datetime", "int", "varchar",
+            "int", "varchar", "real",
+            "int", "varchar", "int", "int", "boolean",
+            "int", "int", "int", "datetime", "datetime",
+            "int", "int", "datetime", "datetime",
+            "int", "int", "int", "datetime", "int", "int"
+        ]
+    },
+    {
+        "db_id": "concert",
+        "column_names": [
+            [-1, "*"],
+            [0, "concert_ID"],
+            [0, "concert_Name"],
+            [0, "Theme"],
+            [0, "Stadium_ID"],
+            [0, "Year"],
+            [1, "Singer_ID"],
+            [1, "Name"],
+            [1, "Country"],
+            [1, "Song_Name"],
+            [1, "Song_release_year"],
+            [1, "Age"],
+            [1, "Is_male"],
+            [2, "concert_ID"],
+            [2, "Singer_ID"],
+            [3, "Stadium_ID"],
+            [3, "Location"],
+            [3, "Name"],
+            [3, "Capacity"],
+            [3, "Highest"],
+            [3, "Lowest"],
+            [3, "Average"]
+        ],
+        "foreign_keys": [
+            {"Stadium_ID": [0, 3]},
+            {"concert_ID": [2, 0]},
+            {"Singer_ID": [2, 1]}
+        ],
+        "primary_keys": [
+            {"concert_ID": 0},
+            {"Singer_ID": 1},
+            {"concert_ID": 2, "Singer_ID": 2},
+            {"Stadium_ID": 3}
+        ],
+        "table_names": [
+            "concert",
+            "singer",
+            "singer_in_concert",
+            "stadium"
+        ],
+        "column_types": [
+            "int", "text", "text", "text", "text",
+            "int", "text", "text", "text", "text", "int", "bool",
+            "int", "text",
+            "int", "text", "text", "int", "int", "int", "int"
+        ]
+    },
+    {
+        "db_id": "Population",
+        "column_names": [
+            [-1, "*"],
+            [0, "ID"],
+            [0, "Name"],
+            [0, "CountryCode"],
+            [0, "District"],
+            [0, "Population"],
+            [1, "Code"],
+            [1, "Name"],
+            [1, "Continent"],
+            [1, "Region"],
+            [1, "SurfaceArea"],
+            [1, "IndepYear"],
+            [1, "Population"],
+            [1, "LifeExpectancy"],
+            [1, "GNP"],
+            [1, "GNPOld"],
+            [1, "LocalName"],
+            [1, "GovernmentForm"],
+            [1, "HeadOfState"],
+            [1, "Capital"],
+            [1, "Code2"],
+            [2, "CountryCode"],
+            [2, "Language"],
+            [2, "IsOfficial"],
+            [2, "Percentage"]
+        ],
+        "foreign_keys": [
+            {"CountryCode": [0, 1]},
+            {"CountryCode": [2, 1]},
+            {"Capital": [1, 0]}
+        ],
+        "primary_keys": [
+            {"ID": 0},
+            {"Code": 1},
+            {"CountryCode": 2, "Language": 2}
+        ],
+        "table_names": [
+            "city",
+            "country",
+            "countrylanguage"
+        ],
+        "column_types": [
+            "integer", "char", "char", "char", "integer",
+            "char", "char", "text", "char", "float(10,2)", "integer", "integer", "float(3,1)", "float(10,2)", "float(10,2)", "char", "char", "char", "integer", "char",
+            "char", "char", "text", "float(4,1)"
         ]
     }
 ]
