@@ -6,14 +6,37 @@
 
 ---
 
+### 🐱 Logo
+
+<p align="center">
+  <img src="img/cat2.png" alt="LogicCat Logo" width="260">
+</p>
+
+---
+
 ### 🧩 Overview
 
 **LogicCat** is a **Chain-of-Thought multi-domain Text-to-SQL benchmark** designed to stress-test complex reasoning capabilities of large language models. It targets scenarios where SQL generation must be coupled with:
 
-- **Physical knowledge reasoning**
-- **Mathematical and logical computation**
-- **Commonsense reasoning**
-- **Ideal / hypothetical reasoning**
+- **Physical knowledge reasoning**  
+  <p align="center">
+    <img src="img/category1.png" alt="LogicCat Physical Knowledge">
+  </p>
+
+- **Mathematical and logical computation**  
+  <p align="center">
+    <img src="img/category2.png" alt="LogicCat Math & Logic">
+  </p>
+
+- **Commonsense reasoning**  
+  <p align="center">
+    <img src="img/category3.png" alt="LogicCat Commonsense">
+  </p>
+
+- **Ideal / hypothetical reasoning**  
+  <p align="center">
+    <img src="img/category4.png" alt="LogicCat Ideal / Hypothetical">
+  </p>
 
 Compared with traditional Text-to-SQL benchmarks, LogicCat introduces **fine-grained CoT annotations** and **multi-step numerical reasoning**, making it closer to real enterprise analytics workloads and significantly more challenging than datasets such as Spider and BIRD ([paper](https://arxiv.org/abs/2505.18744), [leaderboard](https://ffunkytao.github.io/LogiccatBenchmark/)).
 
